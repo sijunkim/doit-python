@@ -1,4 +1,5 @@
 import sys
+
 input = sys.stdin.readline
 suNo, quizNo = map(int, input().split())
 numbers = list(map(int, input().split()))
@@ -11,4 +12,4 @@ for i in numbers:
 
 for i in range(quizNo):
     s, e = map(int, input().split())
-    print(prefix_sum[e] - prefix_sum[s-1])
+    print(prefix_sum[e] - prefix_sum[s - 1])
