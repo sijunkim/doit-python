@@ -4,11 +4,9 @@ input = sys.stdin.readline
 suNo, quizNo = map(int, input().split())
 numbers = list(map(int, input().split()))
 prefix_sum = [0]
-temp = 0
 
-for i in numbers:
-    temp = temp + i
-    prefix_sum.append(temp)
+for i in range(suNo):
+    prefix_sum.append(prefix_sum[i] + numbers[i])
 
 for i in range(quizNo):
     s, e = map(int, input().split())
